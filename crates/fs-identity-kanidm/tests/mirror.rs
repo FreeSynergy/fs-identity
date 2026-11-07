@@ -4,14 +4,25 @@ mod common;
 
 use std::sync::Arc;
 
+use async_trait::async_trait;
 use common::{FakeKanidm, person};
-use fs_groups_core::{GroupRepo, Groups, Member, Mirror};
+use fs_groups_core::{AiMarking, GroupRepo, Groups, Member, Mirror};
 use fs_identity_kanidm::naming::group_name;
 use fs_objects::{Store, TursoStore};
 
+/// Everybody in these tests is a person.
+struct Humans;
+
+#[async_trait]
+impl AiMarking for Humans {
+    async fn is_ai(&self, _person: &str) -> fs_groups_core::Result<Option<bool>> {
+        Ok(Some(false))
+    }
+}
+
 async fn repo() -> GroupRepo {
     let store: Arc<dyn Store> = Arc::new(TursoStore::open_in_memory().await.unwrap());
-    GroupRepo::new(store, "https://example.org/users/owner")
+    GroupRepo::new(store, "https://example.org/users/owner").with_ai_marking(Arc::new(Humans))
 }
 
 #[tokio::test]
