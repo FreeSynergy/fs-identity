@@ -12,7 +12,7 @@
 //! hyphenated UUID is 40 characters and fits. The prefix lets `list` find our groups with one search
 //! and keeps us away from groups made by hand. The display name goes to `description`.
 
-use fs_store::ObjectId;
+use fs_objects::ObjectId;
 
 /// What every group name written by this crate starts with.
 pub const PREFIX: &str = "fsg-";

@@ -1,7 +1,7 @@
 //! The key: our group id <-> the Kanidm group name.
 
 use fs_identity_kanidm::naming::{PREFIX, group_id, group_name};
-use fs_store::ObjectId;
+use fs_objects::ObjectId;
 
 #[test]
 fn the_name_is_derived_from_the_id_and_reads_back() {

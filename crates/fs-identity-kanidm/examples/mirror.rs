@@ -7,7 +7,7 @@ use std::sync::Arc;
 
 use fs_groups_core::{DirectoryGroup, GroupDirectory};
 use fs_identity_kanidm::{KanidmDirectory, ReqwestSeam, StaticPersonMap, Token};
-use fs_store::ObjectId;
+use fs_objects::ObjectId;
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {

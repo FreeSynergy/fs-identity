@@ -27,10 +27,10 @@ pub fn people() -> StaticPersonMap {
 }
 
 pub fn dg(
-    id: fs_store::ObjectId,
+    id: fs_objects::ObjectId,
     name: &str,
     members: &[&str],
-    nested: &[fs_store::ObjectId],
+    nested: &[fs_objects::ObjectId],
 ) -> DirectoryGroup {
     DirectoryGroup {
         id,

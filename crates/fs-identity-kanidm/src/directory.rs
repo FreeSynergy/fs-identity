@@ -9,7 +9,7 @@ use std::sync::Arc;
 use async_trait::async_trait;
 use fs_groups_core::{DirectoryGroup, GroupDirectory, Result};
 use fs_interfaces::Capabilities;
-use fs_store::ObjectId;
+use fs_objects::ObjectId;
 
 use crate::client::KanidmClient;
 use crate::convert::{from_entry, member_values, to_attrs};

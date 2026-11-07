@@ -5,7 +5,7 @@ mod common;
 use common::{FakeKanidm, dg, person, read_all};
 use fs_groups_core::{Error, GroupDirectory};
 use fs_identity_kanidm::{FOREIGN, naming::group_name};
-use fs_store::ObjectId;
+use fs_objects::ObjectId;
 
 #[tokio::test]
 async fn apply_creates_the_group_under_its_derived_name_with_the_display_in_description() {

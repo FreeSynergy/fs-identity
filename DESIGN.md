@@ -91,5 +91,5 @@ non-existent reference, so the nested group must exist first: fs-groups applies 
 
 ## Crates
 
-`fs-groups-core` (git tag v0.1.0), `fs-store` (v0.2.0), `fs-interfaces` (v0.3.0), `reqwest` 0.13 with rustls (MIT OR Apache-2.0),
+`fs-groups-core` (git tag v0.1.0), `fs-objects` (v0.2.0), `fs-interfaces` (v0.3.0), `reqwest` 0.13 with rustls (MIT OR Apache-2.0),
 `serde`, `serde_json`, `thiserror`, `async-trait`. No Kanidm crate, no `kanidm_proto`: Kanidm (MPL-2.0) is only called over the network.

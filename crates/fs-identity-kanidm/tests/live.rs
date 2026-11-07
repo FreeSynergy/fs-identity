@@ -13,7 +13,7 @@ use fs_groups_core::{DirectoryGroup, GroupDirectory};
 use fs_identity_kanidm::{
     KanidmClient, KanidmDirectory, ReqwestSeam, StaticPersonMap, Token, naming::group_name,
 };
-use fs_store::ObjectId;
+use fs_objects::ObjectId;
 
 fn var(name: &str) -> String {
     std::env::var(name).unwrap_or_else(|_| panic!("set {name} to run the live test"))
