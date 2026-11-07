@@ -22,7 +22,8 @@ async fn groups_nested_and_filled_reach_kanidm_and_a_second_sync_is_quiet() {
         r.create("dept", "department").await.unwrap(),
         r.create("team", "team").await.unwrap(),
     );
-    r.add_parent(team.id, dept.id).await.unwrap();
+    let request = r.request_parent(team.id, dept.id).await.unwrap();
+    r.approve_parent(request.id).await.unwrap();
     r.add(team.id, Member::Person(person("ada")), "member")
         .await
         .unwrap();
