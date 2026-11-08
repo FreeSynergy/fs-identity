@@ -636,8 +636,8 @@ dependencies = [
 
 [[package]]
 name = "fs-groups-core"
-version = "0.2.0"
-source = "git+https://github.com/FreeSynergy/fs-groups?tag=v0.2.0#040bdedd90ef3cc2f3eeb4f1e71e646baf42b702"
+version = "0.0.1"
+source = "git+https://github.com/FreeSynergy/fs-groups?tag=v0.0.1#8b4a4580f4f9273b327090800f98160daa1868fe"
 dependencies = [
  "async-trait",
  "chrono",
@@ -652,7 +652,7 @@ dependencies = [
 
 [[package]]
 name = "fs-identity-kanidm"
-version = "0.2.0"
+version = "0.0.1"
 dependencies = [
  "async-trait",
  "fs-groups-core",
@@ -667,16 +667,16 @@ dependencies = [
 
 [[package]]
 name = "fs-interfaces"
-version = "0.45.0"
-source = "git+https://github.com/FreeSynergy/fs-interfaces?tag=v0.45.0#bc4eda933e80c537ae2d73dea371051ed3443fd9"
+version = "0.0.1"
+source = "git+https://github.com/FreeSynergy/fs-interfaces?tag=v0.0.1#9f2d3a0626d7382b478c754eb31834146188dfab"
 dependencies = [
  "capnp",
 ]
 
 [[package]]
 name = "fs-objects"
-version = "0.5.0"
-source = "git+https://github.com/FreeSynergy/fs-objects?tag=v0.5.0#b0a794ab702d8cf8660956950e1e8868e4c155c3"
+version = "0.0.1"
+source = "git+https://github.com/FreeSynergy/fs-objects?tag=v0.0.1#7cf0f05e3a9835b582aa2ac22014f2a1f1bff200"
 dependencies = [
  "async-trait",
  "base64 0.22.1",
