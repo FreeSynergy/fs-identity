@@ -8,7 +8,7 @@ What exists now is one piece of that: an adapter that makes Kanidm mirror the gr
 
 ## What it can do today
 
-Latest tag: `v0.2.0`.
+Latest tag: `v0.0.1`.
 
 - Create, read, update, list and remove groups in Kanidm so that they match FreeSynergy Groups, safely repeatable.
 - Group names in Kanidm are derived from our ids, so it does not need custom attributes.
