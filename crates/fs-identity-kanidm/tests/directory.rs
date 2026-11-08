@@ -77,7 +77,10 @@ async fn apply_changes_only_what_differs() {
         ["bo@idm.test", "cy@idm.test"]
     );
     d.apply(&dg(id, "Club renamed", &[], &[])).await.unwrap();
-    assert!(k.stored(&group_name(id)).unwrap().members.is_empty());
+    assert_eq!(
+        k.stored(&group_name(id)).unwrap().members,
+        [] as [std::string::String; 0]
+    );
 }
 
 #[tokio::test]

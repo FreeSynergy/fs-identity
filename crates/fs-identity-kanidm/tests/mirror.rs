@@ -68,6 +68,7 @@ async fn groups_nested_and_filled_reach_kanidm_and_a_second_sync_is_quiet() {
 }
 
 #[tokio::test]
+#[allow(clippy::many_single_char_names)] // r, k, d, a, b: repo, fake Kanidm, directory and the two groups of one story
 async fn a_hand_edit_is_healed_and_a_deleted_group_leaves_kanidm() {
     let (r, k) = (repo().await, FakeKanidm::new());
     let d = k.directory();

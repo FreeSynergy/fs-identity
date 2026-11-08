@@ -101,5 +101,8 @@ async fn an_id_that_would_change_the_route_is_refused_before_sending() {
             "{bad:?}"
         );
     }
-    assert!(k.calls().is_empty());
+    assert_eq!(
+        k.calls(),
+        [] as [(std::string::String, std::string::String); 0]
+    );
 }
